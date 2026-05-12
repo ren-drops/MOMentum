@@ -6,6 +6,14 @@ import streamlit as st
 import sqlite3 as sql
 import requests
 
+st.markdown("""
+<style>
+    .stApp {
+        background: linear-gradient(#0E1117, #111827);
+    }
+</style>
+""", unsafe_allow_html=True)
+
 st.set_page_config(page_title="MOMentum", page_icon="🏃🏻‍♀️‍➡️", layout="wide")
 
 # TITLE
