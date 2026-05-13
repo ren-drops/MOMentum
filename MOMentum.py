@@ -676,8 +676,21 @@ def dashboard():
 
                     st.rerun()
 
-                except Exception as e:
-                    st.error(f"Ollama error: {e}")
+                except Exception:
+                    reply = """
+                    AMM-AI cloud mode:
+                    Local Ollama model is unavailable on deployed version.
+                    Demo capabilities:
+                    ✅ Task tracking
+                    ✅ Calendar management
+                    ✅ Family messaging
+                    ✅ Grocery coordination
+                    For full AI functionality, run locally with Ollama enabled.
+                    """
+                    
+                    st.session_state.chat_history.append(("You", user_input))
+                    st.session_state.chat_history.append(("AMM-AI", reply))
+                    st.rerun()
 
         st.divider()
 
