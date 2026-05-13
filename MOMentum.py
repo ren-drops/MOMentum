@@ -687,9 +687,9 @@ def dashboard():
                     ✅ Grocery coordination
                     For full AI functionality, run locally with Ollama enabled.
                     """
-                        st.session_state.chat_history.append(("You", user_input))
-                        st.session_state.chat_history.append(("AMM-AI", reply))
-                        st.rerun()
+                    st.session_state.chat_history.append(("You", user_input))
+                    st.session_state.chat_history.append(("AMM-AI", reply))
+                    st.rerun()
 
         st.divider()
 
